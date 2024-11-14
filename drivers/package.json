@@ -55,26 +55,26 @@
         "vitest": "^1.6.0"
     },
     "dependencies": {
-        "@aws-sdk/client-bedrock": "3.635.0",
-        "@aws-sdk/client-bedrock-runtime": "3.635.0",
-        "@aws-sdk/client-s3": "3.635.0",
-        "@aws-sdk/credential-providers": "3.635.0",
-        "@aws-sdk/lib-storage": "3.635.0",
+        "@aws-sdk/client-bedrock": "3.691.0",
+        "@aws-sdk/client-bedrock-runtime": "3.691.0",
+        "@aws-sdk/client-s3": "3.691.0",
+        "@aws-sdk/credential-providers": "3.691.0",
+        "@aws-sdk/lib-storage": "3.691.0",
         "@azure/identity": "^4.4.1",
-        "@azure/openai": "2.0.0-beta.2",
+        "@azure/openai": "2.0.0-beta.3",
         "@google-cloud/vertexai": "^1.7.0",
-        "@huggingface/inference": "2.6.7",
+        "@huggingface/inference": "2.8.1",
         "@llumiverse/core": "workspace:*",
         "@smithy/types": "^3.4.2",
         "api-fetch-client": "^0.13.0",
         "eventsource": "^2.0.2",
         "google-auth-library": "^9.14.0",
-        "groq-sdk": "^0.3.3",
+        "groq-sdk": "^0.8.0",
         "json-schema": "^0.4.0",
         "mnemonist": "^0.39.8",
-        "node-web-stream-adapters": "^0.1.0",
+        "node-web-stream-adapters": "^0.2.0",
         "openai": "^4.61.1",
-        "replicate": "^0.33.0"
+        "replicate": "^0.34.0"
     },
     "ts_dual_module": {
         "outDir": "lib"
