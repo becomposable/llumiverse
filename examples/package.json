@@ -21,7 +21,7 @@
     "devDependencies": {
         "@types/eventsource": "^1.1.15",
         "@types/json-schema": "^7.0.15",
-        "rimraf": "^5.0.5",
+        "rimraf": "^6.0.0",
         "typescript": "^5.4.2"
     },
     "dependencies": {
