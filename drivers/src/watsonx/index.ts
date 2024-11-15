@@ -144,6 +144,9 @@ export class WatsonxDriver extends AbstractDriver<WatsonxDriverOptions, string> 
     }
 
     async generateEmbeddings(options: EmbeddingsOptions): Promise<EmbeddingsResult> {
+        if (options.image) {
+            throw new Error("Image embeddings not supported by Watsonx");
+        }
 
         if (!options.text) {
             throw new Error ("No text provided");

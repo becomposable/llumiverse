@@ -38,7 +38,7 @@ export async function getEmbeddingsForText(driver: VertexAIDriver, options: Text
         }]
     } as EmbedingsForTextPrompt;
 
-    const model = options.model || "textembedding-gecko@latest";
+    const model = options.model || "text-embedding-004";
 
     const result = await driver.fetchClient.post(`/publishers/google/models/${model}:predict`, {
         payload: prompt

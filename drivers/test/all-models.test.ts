@@ -160,7 +160,7 @@ if (process.env.WATSONX_API_KEY) {
         ]
     })
 } else {
-    console.warn("Groq tests are skipped: WATSONX_API_KEY environment variable is not set");
+    console.warn("Watsonx tests are skipped: WATSONX_API_KEY environment variable is not set");
 }
 
 describe.concurrent.each(drivers)("Driver $name", ({ name, driver, models }) => {

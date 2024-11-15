@@ -584,7 +584,8 @@ export class BedrockDriver extends AbstractDriver<BedrockDriverOptions, BedrockP
     async generateEmbeddings({ text, image, model }: EmbeddingsOptions): Promise<EmbeddingsResult> {
 
         this.logger.info("[Bedrock] Generating embeddings with model " + model);
-        const defaultModel = image ? "amazon.titan-embed-image-v1" : "amazon.titan-embed-text-v2:0" 
+        const defaultModel = image ? "amazon.titan-embed-image-v1" : "amazon.titan-embed-text-v2:0";
+        const modelID = model ?? defaultModel;
 
         const invokeBody = {
             inputText: text,
@@ -594,7 +595,7 @@ export class BedrockDriver extends AbstractDriver<BedrockDriverOptions, BedrockP
         const executor = this.getExecutor();
         const res = await executor.invokeModel(
             {
-                modelId: model ?? defaultModel,
+                modelId: modelID,
                 contentType: "application/json",
                 body: JSON.stringify(invokeBody),
             }
@@ -611,7 +612,7 @@ export class BedrockDriver extends AbstractDriver<BedrockDriverOptions, BedrockP
 
         return {
             values: result.embedding,
-            model: defaultModel,
+            model: modelID,
             token_count: result.inputTextTokenCount
         };
 
